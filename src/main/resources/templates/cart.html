@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Cart</title>
+</head>
+<body>
+    <h1>Cart Items</h1>
+    <div th:each="item : ${cartItems}">
+        <img th:src="@{'/images/' + ${item.product.image}}" width="80"/>
+        <p>Name: <span th:text="${item.product.name}"></span></p>
+        <p>Price: ₹<span th:text="${item.product.price}"></span></p>
+        <p>Quantity: <span th:text="${item.quantity}"></span></p>
+        <p>Total: ₹<span th:text="${item.quantity * item.product.price}"></span></p>
+        <hr/>
+    </div>
+    <a href="/">Back to Shopping</a>
+</body>
+</html>
