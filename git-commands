@@ -1,0 +1,53 @@
+cgit --version
+git config --global --list
+git config --global user.name ""
+git config --global user.email ""
+git config --local --unset user.name
+git config --local --unset user.email
+*****************************************
+mkdir dirname
+cd dirname
+notepad file.txt
+***********************
+git init
+git init -b main
+git status
+git add .
+git add file.txt
+git commit -m "msg"
+git commit -a -m "msg"
+git log
+git diff
+git rm --cached file.txt
+*************************************
+git clone <url>
+git remote add origin <url>
+git remote -v
+git remote add <name> <repository-url>
+git remote set-url origin <repository-url>
+git remote rename originold originnew
+git remote remove <origin name>
+git push origin main
+******************************************
+git tag <tag name> -m "message"
+git tag
+git push origin <tag name>
+***************************************
+git checkout -b <branch name>
+git switch -c <branch name>
+git branch
+git switch -
+git switch <branch name>
+git push origin <branch name>
+git branch -d <branch name>
+****************************************
+git merge <branch name>
+git pull origin <branch name>
+
+
+
+
+
+
+
+
