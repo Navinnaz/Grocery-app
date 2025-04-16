@@ -5,6 +5,7 @@ import com.example.grocery.model.CartItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.*;
 
@@ -28,7 +29,7 @@ public class GroceryController {
     }
 
     @PostMapping("/add-to-cart")
-    public String addToCart(@RequestParam int productId, @RequestParam int quantity) {
+    public String addToCart(@RequestParam int productId, @RequestParam int quantity, RedirectAttributes redirectAttributes) {
         Product selected = productList.stream()
                 .filter(p -> p.getId() == productId)
                 .findFirst()
