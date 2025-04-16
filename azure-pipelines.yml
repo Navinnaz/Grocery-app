@@ -1,8 +1,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: Sample-agent-devops
 
 steps:
 - task: Maven@4
@@ -15,4 +14,5 @@ steps:
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
+    sonarQubeRunAnalysis: false 
     
